@@ -1,0 +1,84 @@
+*,*::before,*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  margin: 5rem 10rem;
+  font-size: 1.6rem;
+  background-image:linear-gradient(to right, blue,green);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button{
+  font-size: 1.6rem;
+}
+
+
+.calculator-grid{
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(4, 10rem);
+  grid-template-rows: minmax(10rem, auto) repeat(5, 10rem);
+
+  border-radius: 4rem;
+}
+
+.calculator-grid > button{
+  font-size: 2.5rem;
+  background-color: rgb(255, 255, 255, 0.75);
+  cursor: pointer;
+  border: 1px solid white;
+  outline: none;
+}
+
+.calculator-grid > button:hover, .calculator-grid > button:focus{
+
+  background-color: rgb(255, 255, 255, 0.95);
+
+}
+
+
+
+.output{
+  grid-column: 1/-1;
+  background-color: black;
+
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+
+  word-wrap: break-word;
+  word-break: break-all;
+
+  padding: 1rem;
+
+}
+
+.output .previous-operand{
+  color: rgb(255, 255, 255, 0.75);
+  font-size: 1.2rem;
+}
+
+
+.output .current-operand{
+  color: rgb(255, 255, 255);
+  font-size: 3rem;
+}
+
+
+.span-two{
+  grid-column: span 2;
+}
+
