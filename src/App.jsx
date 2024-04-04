@@ -91,16 +91,16 @@ function evaluate(state) {
   const y = parseFloat(state.previousOperand);
   switch (state.operation) {
     case "+":
-      computation = x + y;
+      computation = y + x;
       break;
     case "-":
-      computation = x - y;
+      computation = y - x;
       break;
     case "*":
-      computation = x * y;
+      computation = y * x;
       break;
     case "/":
-      computation = x / y;
+      computation = y / x;
       break;
   }
 
@@ -160,7 +160,7 @@ function App() {
       <DigitButton dispatch={dispatch} digit="8" />
       <DigitButton dispatch={dispatch} digit="9" />
 
-      <OperationButton dispatch={dispatch} operation="+" />
+      <OperationButton dispatch={dispatch} operation="-" />
       <DigitButton dispatch={dispatch} digit="." />
       <DigitButton dispatch={dispatch} digit="0" />
 
